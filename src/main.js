@@ -83,7 +83,7 @@
 
         // CLEAR - removes all existing content.
         if (tag == "CLEAR") {
-          clearStoryPage();
+          clearStoryContent();
         }
 
         // RESTART - clears everything and restarts the story from the beginning
@@ -161,7 +161,11 @@
     continueStory();
   }
 
-  // Clear story container contents
+  function clearStoryContent() {
+    storyContainer.innerHTML = "";
+  }
+
+  // CLEAR STORY CONTAINER FOR NEW PAGE
   function clearStoryPage() {
     fadeOut(storyContainer, 500);
     storyContainer.innerHTML = "";
