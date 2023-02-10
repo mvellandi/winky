@@ -1,0 +1,33 @@
+/* ==================================== */
+/* BASIC ELEMENTS */
+/* ==================================== */
+body {
+  font-size: var(--text-base);
+  background: var(--light);
+  color: var(--dark);
+  /* overflow: hidden; */
+  padding: 10px;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.7em;
+  font-weight: normal;
+}
+
+a {
+  font-weight: 700;
+  color: var(--red);
+  transition: color 0.6s;
+  /* text-decoration: none; */
+}
+
+a:hover {
+  color: var(--dark);
+  transition: color 0.1s;
+}
+
+img {
+  display: inline-block;
+  margin: 10px;
+}

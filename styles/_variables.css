@@ -1,0 +1,20 @@
+/* ==================================== */
+/* VARIABLES */
+/* ==================================== */
+
+:root {
+  font-size: 0.625rem;
+
+  --light: hsl(0, 0%, 98%);
+  --dark: hsl(0, 0%, 20%);
+
+  --gray: hsl(0, 0%, 50%);
+  --gray-light: hsl(0, 0%, 70%);
+  --gray-dark: hsl(0, 0%, 30%);
+
+  --red: hsl(0, 71%, 50%);
+
+  --text-base: 1.6rem;
+
+  --story-choice-size: 1.8rem;
+}

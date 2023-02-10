@@ -1,40 +1,45 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Search engine and Bookmark titles -->
+    <title>Your Time Machine is Stuck in Reverse, by Geoffrey Golden</title>
+    <!-- No messy with this :) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Optional description for search engine result pages. Use 155-160 characters max. Google will truncate beyond that.  -->
+    <!-- <meta
+      name="description"
+      content="Interactive Story: You'd like to expand your vehicle collection and decide to steal a time machine car. Once in though, hell, how do you operate this thing?"
+    /> -->
+    <!-- Reset/Normalize stylesheet for multibrowser conformity -->
+    <link rel="stylesheet" href="./modern-normalize.min.css" />
+    <!-- The master stylesheet -->
+    <link rel="stylesheet" href="./styles/globals.css" />
+  </head>
 
-    <title>Your Time Machine is Stuck in Reverse</title>
+  <body>
+    <div id="root">
+      <header id="header">
+        <p class="producer">
+          <a href="https://www.adventuresnack.com/">ADVENTURE SNACK</a>
+        </p>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <nav id="controls" class="buttons">
+          <a id="restart" title="Restart story from beginning">Restart</a>
+          <a id="save" title="Save progress">Save</a>
+          <a id="reload" title="Reload from save point">Load</a>
+          <a id="theme-switch" title="Switch theme">Theme</a>
+        </nav>
+      </header>
 
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-    <div class="outerContainer">
-        <h3 class="written-in-ink"><a href="https://www.adventuresnack.com/">ADVENTURE SNACK</a></h3>
-
-        <div id="controls" class="buttons">
-            <a id="rewind" title="Restart story from beginning">Restart</a>
-            <a id="save" title="Save progress">Save</a>
-            <a id="reload" title="Reload from save point">Load</a>
-            <a id="theme-switch" title="Switch theme">Theme</a>
-        </div>
-
-        <p />
-
-        <div id="story" class="container">
-            <div class="header">
-                <h1>Your Time Machine is Stuck in Reverse</h1>
-                <h2 class="byline">by Geoffrey Golden</h2>
-            </div>
-        </div>
+      <!-- Hide story until finished loading -->
+      <main id="story" style="visibility: hidden">
+        <!-- STORY INSERTED BY SCRIPT HERE -->
+      </main>
     </div>
 
     <script src="ink.js"></script>
     <script src="time-machine-reverse.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

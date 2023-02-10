@@ -1,0 +1,55 @@
+/* ==================================== */
+/* THEME */
+/* Dark Theme (Added in Inky 0.10.0) */
+/* Automatically applied, can be forced at the top of Inky script using either: */
+/* '# theme: dark' OR '# theme: light' */
+/* ==================================== */
+body.switched {
+  transition: color 0.6s, background-color 0.6s;
+}
+
+body.dark {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.switched #story {
+  transition: background-color 0.6s;
+}
+
+.dark #story {
+  background: var(--dark);
+}
+
+.dark .producer {
+  background: var(--dark);
+}
+
+.dark p {
+  color: var(--light);
+}
+
+.dark a {
+  color: var(--red);
+  transition: color 0.6s;
+}
+
+.dark a:hover {
+  color: var(--light);
+}
+
+.dark #controls [disabled] {
+  color: var(--gray-dark);
+}
+
+.dark .end {
+  color: var(--light);
+}
+
+.dark #controls {
+  background: var(--dark);
+}
+
+.dark #story {
+  border: 1px solid var(--light);
+}
