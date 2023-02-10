@@ -1,0 +1,37 @@
+/* ==================================== */
+/* CLASS ELEMENTS */
+/* ==================================== */
+
+#header .producer {
+  font-weight: 700;
+  /* transition: color 0.6s, background 0.6s; */
+}
+
+/*  Built-in class: The End */
+/* # CLASS: end */
+.end {
+  text-align: center;
+  font-weight: bold;
+  /* color: var(--dark); */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ==================================== */
+/* CHOICES  */
+/* (Will always appear inside <p> element by default.) */
+/* ==================================== */
+.choice {
+  text-align: center;
+  line-height: 1.7em;
+}
+
+/*  First choice */
+:not(.choice) + .choice {
+  padding-top: 1em;
+}
+
+/* Choice links */
+.choice a {
+  font-size: var(--story-choice-size);
+}

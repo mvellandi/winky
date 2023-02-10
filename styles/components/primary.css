@@ -1,0 +1,49 @@
+/* ==================================== */
+/* PRIMARY COMPONENTS */
+/* ==================================== */
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+#story {
+  /* position used to calculate container height for each story page  */
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--dark);
+}
+
+/* All story children */
+#story > * {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/* ==================================== */
+/* CONTROLS */
+/* ==================================== */
+#controls {
+  /* z-index: 2; */
+  /* font-size: 9pt; */
+  /* text-align: center; */
+  /* padding-top: 24px; */
+  /* position: fixed; */
+  /* right: 0px; */
+  /* left: 0px; */
+  /* top: 0px; */
+  user-select: none;
+  /* background: white; */
+  transition: color 0.6s, background 0.6s;
+}
+
+#controls [disabled] {
+  color: var(--gray-light);
+}
+
+/* Controls separator */
+#controls > *:not(:last-child):after {
+  content: " | ";
+}
