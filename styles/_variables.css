@@ -14,7 +14,8 @@
 
   --red: hsl(0, 71%, 50%);
 
-  --text-base: 1.6rem;
+  --text-base-size: 1.6rem;
+  --text-base-line-height: 1.7rem;
 
   --story-choice-size: 1.8rem;
 }
