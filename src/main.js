@@ -24,7 +24,9 @@
     // Each iteration has one text paragraph and various tags.
     // Tags are first processed, which perform various actions.
     // Last, the paragraph is added to the page along with any 'CLASS' tags.
+    // console.log("CONTINUE STORY: start");
     while (story.canContinue) {
+      // console.log("generating story content");
       // Get ink to generate the next paragraph
       let paragraphText = story.Continue();
       let tags = story.currentTags;
@@ -88,7 +90,10 @@
 
         // RESTART - clears everything and restarts the story from the beginning
         if (tag == "RESTART") {
+          // console.log("Restart tag found, restarting story");
           restart();
+          // IMPORTANT: We need to exit continueStory(), because the story has been restarted.
+          return;
         }
       }
 
@@ -103,7 +108,10 @@
       });
     }
 
+    // console.log("finished story content generation, initializing choices");
+
     // CREATE CHOICES
+    // console.log(story.currentChoices);
     story.currentChoices.forEach((choice) => {
       // Create paragraph with anchor element
       let choiceParagraphElement = document.createElement("p");
@@ -126,11 +134,11 @@
       // CHOICE ACTION
       let choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
       choiceAnchorEl.addEventListener("click", function (event) {
+        // console.log("* action taken");
         // Don't follow <a> link
         event.preventDefault();
 
-        // Clear story container contents
-        clearStoryPage();
+        clearStoryContent();
 
         // Tell the story where to go next
         story.ChooseChoiceIndex(choice.index);
@@ -139,7 +147,7 @@
         savePoint = story.state.toJson();
 
         // Clear and continue the story
-        clearStoryPage();
+        // clearStoryContent();
         continueStory();
       });
     });
@@ -147,7 +155,9 @@
     // END STORY PAGE INITIALIZATION
     // SCROLL TO TOP AND FADE IN
     window.scrollTo(0, 0);
+    // console.log("story page ready, fading in");
     fadeIn(storyContainer, 500);
+    // console.log("CONTINUE STORY: end");
   }
 
   // -----------------------------------
@@ -155,21 +165,16 @@
   // -----------------------------------
 
   function restart() {
+    // console.log("RESTART: restarting");
     story.ResetState();
     savePoint = story.state.toJson();
-    clearStoryPage();
+    clearStoryContent();
+    // console.log("RESTART: story content cleared, continuing story");
     continueStory();
   }
 
   function clearStoryContent() {
     storyContainer.innerHTML = "";
-  }
-
-  // CLEAR STORY CONTAINER FOR NEW PAGE
-  function clearStoryPage() {
-    fadeOut(storyContainer, 500);
-    storyContainer.innerHTML = "";
-    window.scrollTo(0, 0);
   }
 
   // PARSE STORY TAGS
@@ -250,7 +255,7 @@
     reloadEl.addEventListener("click", function (event) {
       if (reloadEl.getAttribute("disabled")) return;
 
-      clearStoryPage();
+      clearStoryContent();
 
       try {
         let savedState = window.localStorage.getItem("save-state");
