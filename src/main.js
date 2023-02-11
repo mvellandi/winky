@@ -2,6 +2,14 @@
   // Create ink story from the content using inkjs
   let story = new inkjs.Story(storyContent);
   let savePoint = "";
+
+  const rs = getComputedStyle(document.querySelector(":root"));
+  const darkTheme = rs.getPropertyValue("--dark");
+  const lightTheme = rs.getPropertyValue("--light");
+  console.log("dark", darkTheme);
+  console.log("light", lightTheme);
+  const metaThemeColor = document.querySelector("meta[name=theme-color]");
+
   let globalTagTheme;
 
   let storyContainer = document.querySelector("#story");
@@ -221,8 +229,9 @@
       savedTheme === "dark" ||
       (savedTheme == undefined && globalTagTheme === "dark") ||
       (savedTheme == undefined && globalTagTheme == undefined && browserDark)
-    )
+    ) {
       document.body.classList.add("dark");
+    }
   }
 
   // STORY CONTROLS
@@ -269,6 +278,13 @@
     let themeSwitchEl = document.getElementById("theme-switch");
     if (themeSwitchEl)
       themeSwitchEl.addEventListener("click", function (event) {
+        if (document.body.classList.contains("dark")) {
+          metaThemeColor.setAttribute("content", lightTheme);
+        } else {
+          metaThemeColor.setAttribute("content", darkTheme);
+        }
+        console.log("MetaThemeColor: ", metaThemeColor.getAttribute("content"));
+
         document.body.classList.add("switched");
         document.body.classList.toggle("dark");
       });
