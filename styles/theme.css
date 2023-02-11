@@ -4,44 +4,21 @@
 /* Automatically applied, can be forced at the top of Inky script using either: */
 /* '# theme: dark' OR '# theme: light' */
 /* ==================================== */
-body.switched {
-  transition: color 0.6s, background-color 0.6s;
-}
-
-.switched #header {
-  transition: color 0.6s, background-color 0.6s;
-}
-
-/* .switched #controls::after {
-  opacity: 1;
-  /* transition: opacity 0.6s ease-in-out;
-} */
-
+body.switched,
+.switched #header,
 .switched #story {
-  transition: color 0.6s, background-color 0.6s;
+  transition: background-color 0.6s;
 }
 
 body.dark {
-  background: var(--dark);
   color: var(--light);
-}
-
-.dark #header,
-.dark #story {
   background: var(--dark);
 }
 
-.dark #controls {
-  /* box-shadow: 0px 17px 4px 0px var(--dark); */
-  /* transition: opacity 0.6s ease-in-out; */
-  /* transition: color 0.6s, background 0.6s; */
-  /* transition: all 0.6s ease-in-out; */
+/* .dark #story, */
+.dark #header {
+  background: var(--dark);
 }
-
-/* .dark #controls::after {
-  opacity: 1;
-  box-shadow: 0px 17px 4px 0px var(--dark);
-} */
 
 .dark #controls [disabled] {
   color: var(--gray);
@@ -51,17 +28,9 @@ body.dark {
   border: 1px solid var(--light);
 }
 
-.dark p {
-  color: var(--light);
-}
-
-.dark a {
-  color: var(--red);
-  transition: color 0.6s;
-}
-
 .dark a:hover {
   color: var(--light);
+  transition: color 0.1s;
 }
 
 .dark .end {
