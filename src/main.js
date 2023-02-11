@@ -6,8 +6,6 @@
   const rs = getComputedStyle(document.querySelector(":root"));
   const darkTheme = rs.getPropertyValue("--dark");
   const lightTheme = rs.getPropertyValue("--light");
-  console.log("dark", darkTheme);
-  console.log("light", lightTheme);
   const metaThemeColor = document.querySelector("meta[name=theme-color]");
 
   let globalTagTheme;
@@ -283,7 +281,6 @@
         } else {
           metaThemeColor.setAttribute("content", darkTheme);
         }
-        console.log("MetaThemeColor: ", metaThemeColor.getAttribute("content"));
 
         document.body.classList.add("switched");
         document.body.classList.toggle("dark");
