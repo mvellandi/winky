@@ -8,26 +8,47 @@ body.switched {
   transition: color 0.6s, background-color 0.6s;
 }
 
+.switched #header {
+  transition: color 0.6s, background-color 0.6s;
+}
+
+/* .switched #controls::after {
+  opacity: 1;
+  /* transition: opacity 0.6s ease-in-out;
+} */
+
+.switched #story {
+  transition: color 0.6s, background-color 0.6s;
+}
+
 body.dark {
   background: var(--dark);
   color: var(--light);
 }
 
-.switched #story {
-  transition: background-color 0.6s;
-}
-
-.switched #header {
-  transition: color 0.6s, background-color 0.6s;
-}
-
-.dark #header {
-  box-shadow: 0px 17px 7px 0px var(--dark);
-}
-
 .dark #header,
 .dark #story {
   background: var(--dark);
+}
+
+.dark #controls {
+  /* box-shadow: 0px 17px 4px 0px var(--dark); */
+  /* transition: opacity 0.6s ease-in-out; */
+  /* transition: color 0.6s, background 0.6s; */
+  /* transition: all 0.6s ease-in-out; */
+}
+
+/* .dark #controls::after {
+  opacity: 1;
+  box-shadow: 0px 17px 4px 0px var(--dark);
+} */
+
+.dark #controls [disabled] {
+  color: var(--gray);
+}
+
+.dark #story {
+  border: 1px solid var(--light);
 }
 
 .dark p {
@@ -43,18 +64,6 @@ body.dark {
   color: var(--light);
 }
 
-.dark #controls [disabled] {
-  color: var(--gray);
-}
-
 .dark .end {
   color: var(--light);
-}
-
-.dark #controls {
-  background: var(--dark);
-}
-
-.dark #story {
-  border: 1px solid var(--light);
 }

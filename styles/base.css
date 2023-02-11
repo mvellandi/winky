@@ -1,17 +1,6 @@
 /* ==================================== */
 /* BASIC ELEMENTS */
 /* ==================================== */
-html {
-  overscroll-behavior: none;
-}
-
-body {
-  font-size: var(--text-base-size);
-  background: var(--light);
-  color: var(--dark);
-  /* overflow: hidden; */
-}
-
 p {
   font-size: var(--text-base);
   line-height: 1.7em;
