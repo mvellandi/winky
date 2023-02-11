@@ -17,11 +17,16 @@ body.dark {
   transition: background-color 0.6s;
 }
 
-.dark #story {
-  background: var(--dark);
+.switched #header {
+  transition: color 0.6s, background-color 0.6s;
 }
 
-.dark .producer {
+.dark #header {
+  box-shadow: 0px 17px 7px 0px var(--dark);
+}
+
+.dark #header,
+.dark #story {
   background: var(--dark);
 }
 
@@ -39,7 +44,7 @@ body.dark {
 }
 
 .dark #controls [disabled] {
-  color: var(--gray-dark);
+  color: var(--gray);
 }
 
 .dark .end {

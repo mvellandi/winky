@@ -10,7 +10,6 @@ body {
   background: var(--light);
   color: var(--dark);
   /* overflow: hidden; */
-  padding: 10px;
 }
 
 p {
@@ -23,7 +22,7 @@ a {
   font-weight: 700;
   color: var(--red);
   transition: color 0.6s;
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 
 a:hover {

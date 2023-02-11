@@ -3,7 +3,10 @@
 /* ==================================== */
 
 #header .producer {
+  font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
+  margin: 0;
   /* transition: color 0.6s, background 0.6s; */
 }
 
@@ -22,8 +25,10 @@
 /* (Will always appear inside <p> element by default.) */
 /* ==================================== */
 .choice {
+  margin: 3rem 0;
   text-align: center;
-  line-height: 1.7em;
+  line-height: 1.2em;
+  letter-spacing: 0.1rem;
 }
 
 /*  First choice */
@@ -33,5 +38,6 @@
 
 /* Choice links */
 .choice a {
+  font-weight: 600;
   font-size: var(--story-choice-size);
 }
