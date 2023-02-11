@@ -27,8 +27,8 @@
 .choice {
   margin: 3rem 0;
   text-align: center;
-  line-height: 1.2em;
-  letter-spacing: 0.1rem;
+  line-height: 1.4em;
+  letter-spacing: 0.08rem;
 }
 
 /*  First choice */
@@ -38,6 +38,6 @@
 
 /* Choice links */
 .choice a {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--story-choice-size);
 }
