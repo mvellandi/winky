@@ -15,7 +15,6 @@
   align-items: center;
   gap: 10px;
   background-color: var(--light);
-  transition: font-size 0.6s;
 }
 
 #story {
@@ -24,6 +23,7 @@
   padding: 20px;
   border: 1px solid var(--dark);
   margin-top: calc(var(--header-height) + 20px);
+  font-size: 1.86rem;
 }
 
 /* All story children */
@@ -42,6 +42,7 @@
   justify-content: center;
   gap: 10px;
   user-select: none;
+  font-size: 1.7rem;
 }
 
 #controls > * {
