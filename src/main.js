@@ -55,8 +55,8 @@
           // which we'd then split and add to the image element
           // For now, only src and class are supported
           // src is automatically inferred as the first attribute
-          //   ex: IMAGE: src&class
-          //   ex: IMAGE: src&class=class1,class2
+          //   ex: IMAGE: img/beer.png&class=class1
+          //   ex: IMAGE: img/beer.png&class=class1,class2
 
           // Test if the image has attributes, if so, split them and add them to the image element
           if (splitTag.val.includes("&")) {
@@ -64,6 +64,7 @@
             imageElement.src = attrs.shift();
             attrs.forEach((attr) => {
               let [a, v] = attr.split("=");
+              // For now, only src and class are supported. To add more, check their names here
               if (a == "class") {
                 //   check if there are multiple classes
                 if (v.includes(",")) {
