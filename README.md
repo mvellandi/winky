@@ -8,6 +8,7 @@ To make your own story, you can use this template as a base, but you must use a 
 To do so:
 
 1. [Download and install the Inky Editor](https://github.com/inkle/inky/releases)
-2. Write a story in the Inky Editor and export it as a .js file
-3. Replace the file 'story.js' with your own story file
-4. Open the file 'index.html' in a browser and enjoy your story!
+2. [Learn how to write a story in Inky](https://www.inklestudios.com/ink/web-tutorial/)
+3. Write a story in the Inky Editor and export it as a .js file
+4. Replace the file 'story.js' with your own story file
+5. Open the file 'index.html' in a browser and enjoy your story!
