@@ -1,0 +1,37 @@
+/* NOTE: This file is loaded by JS and injected into the index.html head */
+/* It is a means of preloading self-hosted or imported fonts */
+
+/* Base font */
+
+/* To use a custom font(s):
+1) If there's a base-font defined above, comment it out
+2) import it the custom font below OR embed it for faster performance
+3a) Assign it within 'variables.css', then reference the variable with the selector/class you want
+3b) OR find the selector/class you wan't to directly assign it to it
+
+NOTE: All selectors and classes with font attributes refer to 'variables.css' to make updates easier in one place
+
+Custom font
+@import rule here
+OR save the fonts in: /assets/fonts */
+
+@font-face {
+  font-family: "Berlin Sans";
+  src: url(./assets/fonts/brlns/brlns-db.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Berlin Sans";
+  src: url(./assets/fonts/brlns/brlns-rg.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Berlin Sans";
+  src: url(./assets/fonts/brlns/brlns-lt.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
