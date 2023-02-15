@@ -13,6 +13,9 @@
     <meta name="theme-color" content="" />
     <!-- Reset/Normalize stylesheet for multibrowser conformity -->
     <link rel="stylesheet" href="./styles/modern-normalize.min.css" />
+    <style type="text/css" id="headStyle"></style>
+    <!-- Fonts -->
+    <script src="./head.js" rel="preload"></script>
     <!-- The master stylesheet -->
     <link rel="stylesheet" href="./styles/globals.css" />
   </head>
@@ -20,9 +23,9 @@
   <body>
     <div id="root">
       <header id="header">
-        <p class="producer">
+        <h1 class="producer">
           <a href="https://www.adventuresnack.com/">ADVENTURE SNACK</a>
-        </p>
+        </h1>
 
         <nav id="controls" class="buttons">
           <a id="restart" title="Restart story from beginning">Restart</a>
@@ -36,9 +39,11 @@
       </header>
 
       <!-- Hide story until finished loading -->
-      <main id="story" style="opacity: 0">
-        <!-- STORY INSERTED BY SCRIPT HERE -->
-      </main>
+      <div id="story-box">
+        <main id="story" style="opacity: 0">
+          <!-- STORY INSERTED BY SCRIPT HERE -->
+        </main>
+      </div>
     </div>
 
     <script src="./src/ink.js"></script>
