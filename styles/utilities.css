@@ -1,6 +1,10 @@
-/* UTILITIES */
+/* STORY */
+.end {
+  text-align: center;
+  font-weight: bold;
+}
 
+/* VISUAL */
 .block {
   display: block;
 }
-
