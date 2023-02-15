@@ -2,7 +2,7 @@
 
 ## Summary
 
-This temmplate was made by Mario Vellandi for the author Geoffrey Golden and his publication: Adventure Snack.
+This template was made by Mario Vellandi for the author Geoffrey Golden and his publication: Adventure Snack.
 While this template is free to use, the story in the file 'story.js' and the images used are copyrighted by Geoffrey Golden and Adventure Snack.
 To make your own story, you can use this template as a base, but you must use a new story file.
 To do so:
