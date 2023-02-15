@@ -5,19 +5,25 @@
 :root {
   font-size: 0.625rem;
 
+  /* COLORS */
   --light: hsl(0, 0%, 98%);
   --dark: hsl(0, 0%, 12%);
-
   --gray: hsl(0, 0%, 50%);
   --gray-light: hsl(0, 0%, 70%);
   --gray-dark: hsl(0, 0%, 30%);
-
   --red: hsl(0, 71%, 50%);
 
-  --text-base-size: 1.8rem;
-  --text-base-line-height: 1.7rem;
+  /* TYPE */
+  --font-base-custom: 'Roboto', var(--font-base);
+  --font-brand: 'Berlin Sans', var(--font-base);
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-base-size: 1.8rem;
+  --font-base-line-height: 1.7;
 
-  --header-height: 7.6rem;
+  /* COMPONENTS */
+  --header-title-font: var(--font-brand);
 
+  /* STORY */
   --story-choice-size: 2.2rem;
+  --story-fade-in-ms: 600;
 }

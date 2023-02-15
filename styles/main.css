@@ -1,0 +1,283 @@
+/* ==================================== */
+/* PRIMARY STYLES */
+/* ==================================== */
+#header {
+  width: calc(100% - 40px);
+  padding: 20px 0;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--light);
+}
+.producer {
+  font-family: var(--font-brand);
+  font-size: 2.3rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+#controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  user-select: none;
+  font-family: var(--font-brand);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+}
+#controls > * {
+  line-height: 1;
+}
+#controls span {
+  color: var(--red);
+  font-weight: 300;
+}
+#controls [disabled] {
+  color: var(--gray-light);
+}
+#story-box {
+  margin-top: 95px;
+  min-height: calc(100vh - 95px);
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#story {
+  border: 1px solid var(--dark);
+  padding: 20px;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+}
+/* All story children */
+#story > * {
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+.choice {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: var(--story-choice-size);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08rem;
+}
+/*  First choice */
+:not(.choice) + .choice {
+  margin-top: 3.6rem;
+}
+/*  Built-in class: The End */
+/* # CLASS: end */
+.end {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* ==================================== */
+/* BREAKPOINTS */
+/* ==================================== */
+/* 600 */
+/* ==================================== */
+@media screen and (min-width: 600px) {
+  #header {
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+  .producer {
+    font-size: 3rem;
+  }
+  #controls {
+    font-size: 2.2rem;
+  }
+  #story-box {
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
+  }
+  #story {
+    padding: 20px 30px;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  .choice {
+    font-size: 2.8rem;
+  }
+}
+/* ==================================== */
+/* 768 */
+/* ==================================== */
+@media screen and (min-width: 768px) {
+  #header {
+    padding-top: 40px;
+  }
+  .producer {
+    font-size: 3.4rem;
+  }
+  #story-box {
+    margin-top: 134px;
+    min-height: calc(100vh - 134px);
+  }
+  #story {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/* ==================================== */
+/* 800 */
+/* ==================================== */
+@media screen and (min-width: 800px) {
+  #header {
+    padding-top: 60px;
+  }
+  #story-box {
+    margin-top: 150px;
+    min-height: calc(100vh - 150px);
+    font-size: 2.2rem;
+  }
+}
+/* ==================================== */
+/* 1024 */
+/* ==================================== */
+@media screen and (min-width: 1024px) {
+  #header {
+    padding-top: 80px;
+    padding-bottom: 34px;
+    gap: 20px;
+  }
+  #story-box {
+    margin-top: 204px;
+    min-height: calc(100vh - 204px);
+  }
+  #story {
+    max-width: calc(85ch + 40px);
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 2.6rem;
+    line-height: 1.5;
+  }
+  .choice {
+    font-size: 3.4rem;
+    margin: 4rem 0;
+  }
+}
+/* ==================================== */
+/* TABLET 1024 */
+/* ==================================== */
+@media screen and (orientation: portrait) and (min-width: 1024px) {
+  #header {
+    padding-top: 80px;
+    padding-bottom: 34px;
+    gap: 20px;
+  }
+  .producer {
+    font-size: 4.2rem;
+  }
+  #controls {
+    font-size: 2.8rem;
+  }
+  #story-box {
+    margin-top: 204px;
+    min-height: calc(100vh - 204px);
+  }
+}
+/* ==================================== */
+/* 1280 */
+/* ==================================== */
+@media screen and (min-width: 1280px) {
+  #header {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    gap: 10px;
+    /* border: 1px solid red; */
+  }
+  .producer {
+    font-size: 3.2rem;
+  }
+  #controls {
+    font-size: 2rem;
+  }
+  #story-box {
+    margin-top: 118px;
+    min-height: calc(100vh - 118px);
+  }
+  #story {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  .choice {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+  }
+}
+/* ==================================== */
+/* 1536 */
+/* ==================================== */
+@media screen and (min-width: 1536px) {
+  #header {
+    padding-top: 50px;
+    padding-bottom: 24px;
+    gap: 10px;
+    /* border: 1px solid red; */
+  }
+  #story-box {
+    margin-top: 138px;
+    min-height: calc(100vh - 138px);
+  }
+  #story {
+    font-size: 2.2rem;
+    line-height: 1.55;
+  }
+  .choice {
+    font-size: 2.6rem;
+    margin: 2.6rem 0;
+  }
+}
+/* ==================================== */
+/* 1920 */
+/* ==================================== */
+@media screen and (min-width: 1920px) {
+  #header {
+    padding-top: 50px;
+    padding-bottom: 24px;
+    gap: 10px;
+    /* border: 1px solid red; */
+  }
+  #story-box {
+    margin-top: 136px;
+    min-height: calc(100vh - 136px);
+  }
+}
+/* ==================================== */
+/* 2000 */
+/* ==================================== */
+@media screen and (min-width: 2000px) {
+  #header {
+    padding-top: 100px;
+    padding-bottom: 24px;
+    gap: 10px;
+    /* border: 1px solid red; */
+  }
+  .producer {
+    font-size: 3.8rem;
+  }
+  #controls {
+    font-size: 2.4rem;
+  }
+  #story-box {
+    margin-top: 196px;
+    min-height: calc(100vh - 196px);
+    padding-top: 40px;
+    justify-content: start;
+  }
+}

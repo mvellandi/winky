@@ -1,5 +1,6 @@
 /* UTILITIES */
 
-.hide {
-  opacity: 0;
+.block {
+  display: block;
 }
+
