@@ -3,9 +3,11 @@
   let story = new inkjs.Story(storyContent);
   let savePoint = "";
 
-  const rs = getComputedStyle(document.querySelector(":root"));
-  const darkTheme = rs.getPropertyValue("--dark");
-  const lightTheme = rs.getPropertyValue("--light");
+  const rootStyle = getComputedStyle(document.querySelector(":root"));
+  const darkTheme = rootStyle.getPropertyValue("--dark");
+  const lightTheme = rootStyle.getPropertyValue("--light");
+  const storyFadeInMs =
+    Number(rootStyle.getPropertyValue("--story-fade-in-ms")) || 600;
   const metaThemeColor = document.querySelector("meta[name=theme-color]");
 
   let globalTagTheme;
@@ -162,7 +164,7 @@
     // SCROLL TO TOP AND FADE IN
     window.scrollTo(0, 0);
     // console.log("story page ready, fading in");
-    fadeIn(storyContainer, 500);
+    fadeIn(storyContainer, storyFadeInMs);
     // console.log("CONTINUE STORY: end");
   }
 
