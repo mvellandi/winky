@@ -4,7 +4,12 @@
   font-weight: bold;
 }
 
-/* VISUAL */
+/* LAYOUT */
 .block {
   display: block;
+}
+
+/* TYPOGRAPHY */
+.strike {
+  text-decoration: line-through;
 }
