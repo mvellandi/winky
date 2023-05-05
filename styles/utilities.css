@@ -13,3 +13,8 @@
 .strike {
   text-decoration: line-through;
 }
+
+/* SIZING */
+.w-full {
+  width: 100%;
+}
