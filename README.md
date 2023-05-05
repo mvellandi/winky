@@ -3,7 +3,7 @@
 ## Summary
 
 Publish your own interactive stories! This web template is for use with the [Ink scripting language and editor](https://www.inklestudios.com/ink/).  
-Example here: https://inky-web.vellandi.net
+Example here: [https://winky.vellandi.net](https://winky.vellandi.net)
 
 ## License
 
